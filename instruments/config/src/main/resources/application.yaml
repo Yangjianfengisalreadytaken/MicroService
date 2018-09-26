@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: ssh://user@localhost:/local/GIT_SERVER/gitrepository/SpringCloudLearning
+          search-paths: config-repo
+
+server:
+  port: 8033
+

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: fegin-consumer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.92.32.99:8002/eureka,http://10.92.32.99:8001/eureka
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 8600
+# ribbon远程（封装为fegin）调用参数配置
+ribbon:
+  ConnectionTimeout: 500
+  ReadTimeout: 5000
+# ribbon 针对某个单独服务调用参数配置
+userService:
+  ribbon:
+    ConnectionTimeout: 500
+    ReadTimeout: 2000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 2
+    MaxAutoRetries: 1
+

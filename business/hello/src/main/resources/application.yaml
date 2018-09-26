@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: helloService
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.92.32.99:8002/eureka,http://10.92.32.99:8001/eureka
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 8200
+#  port: ${random.int[8100,10000]}

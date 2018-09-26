@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: hystrix-dashboard
+server:
+  port: 8300
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8002/eureka,http://127.0.0.1:8001/eureka
+#  instance:
+#    prefer-ip-address: true

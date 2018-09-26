@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 8900
+management:
+  server:
+    port: 8901
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.92.32.99:8002/eureka,http://10.92.32.99:8001/eureka
+  instance:
+    prefer-ip-address: true
+turbine:
+  app-config: helloService
+#  cluster-name-expression: new String("default")
+  combine-host-port: true
+
